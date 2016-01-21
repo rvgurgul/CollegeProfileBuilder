@@ -14,6 +14,7 @@
 		3F453A5C1C4FE885005BF86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F453A5A1C4FE885005BF86D /* LaunchScreen.storyboard */; };
 		3F453A671C4FE885005BF86D /* CollegeProfileBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A661C4FE885005BF86D /* CollegeProfileBuilderTests.swift */; };
 		3F453A721C4FE885005BF86D /* CollegeProfileBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A711C4FE885005BF86D /* CollegeProfileBuilderUITests.swift */; };
+		3F453A801C4FEB6E005BF86D /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A7F1C4FEB6E005BF86D /* College.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F453A6D1C4FE885005BF86D /* CollegeProfileBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeProfileBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F453A711C4FE885005BF86D /* CollegeProfileBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeProfileBuilderUITests.swift; sourceTree = "<group>"; };
 		3F453A731C4FE885005BF86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F453A7F1C4FEB6E005BF86D /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = College.swift; path = ../College.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3F453A511C4FE885005BF86D /* AppDelegate.swift */,
+				3F453A7F1C4FEB6E005BF86D /* College.swift */,
 				3F453A531C4FE885005BF86D /* ViewController.swift */,
 				3F453A551C4FE885005BF86D /* Main.storyboard */,
 				3F453A581C4FE885005BF86D /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			files = (
 				3F453A541C4FE885005BF86D /* ViewController.swift in Sources */,
 				3F453A521C4FE885005BF86D /* AppDelegate.swift in Sources */,
+				3F453A801C4FEB6E005BF86D /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
