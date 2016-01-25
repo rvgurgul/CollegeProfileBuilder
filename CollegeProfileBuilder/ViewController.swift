@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let myCell = collegesTableView.dequeueReusableCellWithIdentifier("collegeCell", forIndexPath: indexPath)
-        myCell.textLabel!.text = collegeList[indexPath.row].name
+        myCell.textLabel!.text = "\(collegeList[indexPath.row].name) (\(collegeList[indexPath.row].num))"
         myCell.detailTextLabel!.text = collegeList[indexPath.row].loc
         return myCell
     }
