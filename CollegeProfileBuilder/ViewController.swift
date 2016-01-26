@@ -21,12 +21,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
         collegesTableView.dataSource = self
         collegesTableView.delegate = self
+        collegesTableView.reloadData()
         
         collegeEditButton.tag = 0
-        
+    
         collegeList.append(College(Name: "name1", Loc: "location1", Num: 1))
         collegeList.append(College(Name: "name2", Loc: "location2", Num: 2))
         collegeList.append(College(Name: "name3", Loc: "location3", Num: 3))
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        collegesTableView.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let nextVC = segue.destinationViewController as! DetailViewController
+        let selectedRow = collegesTableView.indexPathForSelectedRow!.row
+        nextVC.data = collegeList[selectedRow]
     }
     
     @IBAction func editCollegeList(sender: UIBarButtonItem)

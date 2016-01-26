@@ -45,6 +45,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7zm-Hd-glX" kind="show" id="8oX-DZ-6ib"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -82,6 +85,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2453" y="320"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="FAS-hB-veH">
+            <objects>
+                <viewController id="7zm-Hd-glX" customClass="DetailViewController" customModule="CollegeProfileBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zVc-jR-4NO"/>
+                        <viewControllerLayoutGuide type="bottom" id="qlh-z6-PWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RZz-zA-qrJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgE-i6-0Up">
+                                <rect key="frame" x="180" y="72" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="PfH-YG-9NU"/>
+                                    <constraint firstAttribute="width" constant="240" id="ejb-eU-OkC"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fR9-lM-CAz">
+                                <rect key="frame" x="225" y="361" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vi-Bq-m9C">
+                                <rect key="frame" x="225" y="399" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d4-Ak-v9k">
+                                <rect key="frame" x="277" y="437" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveNewData:" destination="7zm-Hd-glX" eventType="touchUpInside" id="Qid-GA-PbH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-LE-lHO">
+                                <rect key="frame" x="225" y="323" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fR9-lM-CAz" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="0bW-j4-wLF"/>
+                            <constraint firstItem="7vi-Bq-m9C" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="7oM-fn-NRd"/>
+                            <constraint firstItem="0d4-Ak-v9k" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="TZ9-pr-wKr"/>
+                            <constraint firstItem="MUZ-LE-lHO" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="UGV-0Q-jbp"/>
+                            <constraint firstItem="zgE-i6-0Up" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="gcV-NP-vlS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collegeLocation" destination="fR9-lM-CAz" id="37f-hY-MfZ"/>
+                        <outlet property="collegeName" destination="MUZ-LE-lHO" id="OL5-bx-agf"/>
+                        <outlet property="collegePicture" destination="zgE-i6-0Up" id="a8r-X0-9sf"/>
+                        <outlet property="collegePopulation" destination="7vi-Bq-m9C" id="XMs-ox-PRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Soi-YO-jus" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3175" y="320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Em-KD-VNj">
