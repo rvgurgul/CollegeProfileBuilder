@@ -11,6 +11,7 @@ import UIKit
 
 class College
 {
+    var page: String
     var name: String
     var loc: String
     var num: Int
@@ -18,18 +19,37 @@ class College
     
     init(Name: String, Loc: String, Pic: String, Num: Int)
     {
+        page = ""
         name = Name
         loc = Loc
         num = Num
         pic = UIImage(named: Pic)!
     }
     
-    init(Name: String, Loc: String, Num: Int)
+    init(Page: String, Name: String, Loc: String, Pic: String, Num: Int)
     {
+        page = Page
+        name = Name
+        loc = Loc
+        num = Num
+        pic = UIImage(named: Pic)!
+    }
+    
+    init(Page: String, Name: String, Loc: String, Num: Int)
+    {
+        page = Page
         name = Name
         loc = Loc
         num = Num
         pic = UIImage(named: "default")!
     }
     
+    init(Name: String, Loc: String, Num: Int)
+    {
+        page = ""
+        name = Name
+        loc = Loc
+        num = Num
+        pic = UIImage(named: "default")!
+    }
 }

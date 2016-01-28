@@ -10,7 +10,6 @@
 		3F453A521C4FE885005BF86D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A511C4FE885005BF86D /* AppDelegate.swift */; };
 		3F453A541C4FE885005BF86D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A531C4FE885005BF86D /* ViewController.swift */; };
 		3F453A571C4FE885005BF86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F453A551C4FE885005BF86D /* Main.storyboard */; };
-		3F453A591C4FE885005BF86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F453A581C4FE885005BF86D /* Assets.xcassets */; };
 		3F453A5C1C4FE885005BF86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F453A5A1C4FE885005BF86D /* LaunchScreen.storyboard */; };
 		3F453A671C4FE885005BF86D /* CollegeProfileBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A661C4FE885005BF86D /* CollegeProfileBuilderTests.swift */; };
 		3F453A721C4FE885005BF86D /* CollegeProfileBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A711C4FE885005BF86D /* CollegeProfileBuilderUITests.swift */; };
@@ -40,7 +39,6 @@
 		3F453A511C4FE885005BF86D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F453A531C4FE885005BF86D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F453A561C4FE885005BF86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F453A581C4FE885005BF86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F453A5B1C4FE885005BF86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F453A5D1C4FE885005BF86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F453A621C4FE885005BF86D /* CollegeProfileBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeProfileBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +104,6 @@
 				3F453A531C4FE885005BF86D /* ViewController.swift */,
 				3F453A811C57D274005BF86D /* DetailViewController.swift */,
 				3F453A551C4FE885005BF86D /* Main.storyboard */,
-				3F453A581C4FE885005BF86D /* Assets.xcassets */,
 				3F453A5A1C4FE885005BF86D /* LaunchScreen.storyboard */,
 				3F453A5D1C4FE885005BF86D /* Info.plist */,
 			);
@@ -239,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F453A5C1C4FE885005BF86D /* LaunchScreen.storyboard in Resources */,
-				3F453A591C4FE885005BF86D /* Assets.xcassets in Resources */,
 				3F453A571C4FE885005BF86D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

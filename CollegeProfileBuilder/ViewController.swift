@@ -25,9 +25,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         collegeEditButton.tag = 0
     
-        collegeList.append(College(Name: "name1", Loc: "location1", Num: 1))
-        collegeList.append(College(Name: "name2", Loc: "location2", Num: 2))
-        collegeList.append(College(Name: "name3", Loc: "location3", Num: 3))
+        collegeList.append(College(Name: "University of Illinois", Loc: "Urbana–Champaign", Num: 44087))
+        collegeList.append(College(Name: "University of Wisconsin", Loc: "Madison", Num: 43193))
+        collegeList.append(College(Name: "Indiana University", Loc: "Bloomington", Num: 48514))
     }
     
     override func viewDidAppear(animated: Bool)
@@ -60,6 +60,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         let myAlert = UIAlertController(title: "Add a New College to the List", message: nil, preferredStyle: .Alert)
         myAlert.addTextFieldWithConfigurationHandler
+        {   (pageField) -> Void in
+            pageField.placeholder = "College Webpage"
+        }
+        myAlert.addTextFieldWithConfigurationHandler
         {   (nameField) -> Void in
             nameField.placeholder = "College Name"
         }
@@ -75,11 +79,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         let confirmAction = UIAlertAction(title: "Confirm", style: .Default)
         {   (action) -> Void in
-            let nameTF = myAlert.textFields![0]
-            let locTF = myAlert.textFields![1]
-            let numTF = myAlert.textFields![2]
+            let pageTF = myAlert.textFields![0]
+            let nameTF = myAlert.textFields![1]
+            let locTF = myAlert.textFields![2]
+            let numTF = myAlert.textFields![3]
                 
-            self.collegeList.append(College(Name: nameTF.text!, Loc: locTF.text!, Num: Int(numTF.text!)!))
+            self.collegeList.append(College(Page: pageTF.text!, Name: nameTF.text!, Loc: locTF.text!, Num: Int(numTF.text!)!))
             self.collegesTableView.reloadData()
         }
         
