@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FqO-yu-bAd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FqO-yu-bAd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -46,7 +46,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="7zm-Hd-glX" kind="show" id="8oX-DZ-6ib"/>
+                                            <segue destination="7zm-Hd-glX" kind="show" identifier="toDetail" id="8oX-DZ-6ib"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -98,55 +98,148 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgE-i6-0Up">
-                                <rect key="frame" x="180" y="72" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="PfH-YG-9NU"/>
-                                    <constraint firstAttribute="width" constant="240" id="ejb-eU-OkC"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fR9-lM-CAz">
-                                <rect key="frame" x="225" y="361" width="150" height="30"/>
+                                <rect key="frame" x="180" y="361" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7zm-Hd-glX" id="il7-3H-lP3"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vi-Bq-m9C">
-                                <rect key="frame" x="225" y="399" width="150" height="30"/>
+                                <rect key="frame" x="180" y="399" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d4-Ak-v9k">
-                                <rect key="frame" x="277" y="437" width="46" height="30"/>
-                                <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveNewData:" destination="7zm-Hd-glX" eventType="touchUpInside" id="Qid-GA-PbH"/>
+                                    <outlet property="delegate" destination="7zm-Hd-glX" id="4hY-VH-FYj"/>
                                 </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-LE-lHO">
-                                <rect key="frame" x="225" y="323" width="150" height="30"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7e-kO-Tj1">
+                                <rect key="frame" x="180" y="75" width="240" height="240"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULf-xp-k5V">
+                                <rect key="frame" x="180" y="437" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7zm-Hd-glX" id="6rB-RD-uzl"/>
+                                </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-LE-lHO">
+                                <rect key="frame" x="180" y="323" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7zm-Hd-glX" id="Ers-Kl-lH0"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDf-a1-xdz">
+                                <rect key="frame" x="428" y="430" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="➤"/>
+                                <connections>
+                                    <action selector="loadWebpage:" destination="7zm-Hd-glX" eventType="touchUpInside" id="49Z-po-AHe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrO-4t-9fA">
+                                <rect key="frame" x="180" y="75" width="240" height="240"/>
+                                <connections>
+                                    <segue destination="pQz-j0-tlc" kind="show" identifier="toCamera" id="8yL-BT-g4O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="fR9-lM-CAz" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="0bW-j4-wLF"/>
+                            <constraint firstItem="d7e-kO-Tj1" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="358-cs-be7"/>
                             <constraint firstItem="7vi-Bq-m9C" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="7oM-fn-NRd"/>
-                            <constraint firstItem="0d4-Ak-v9k" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="TZ9-pr-wKr"/>
+                            <constraint firstItem="ULf-xp-k5V" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="M65-ku-i6F"/>
                             <constraint firstItem="MUZ-LE-lHO" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="UGV-0Q-jbp"/>
-                            <constraint firstItem="zgE-i6-0Up" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="gcV-NP-vlS"/>
+                            <constraint firstItem="YrO-4t-9fA" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="VMJ-P5-gCw"/>
+                            <constraint firstItem="RDf-a1-xdz" firstAttribute="leading" secondItem="ULf-xp-k5V" secondAttribute="trailing" constant="10" id="bOG-dr-4bl"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collegeLocation" destination="fR9-lM-CAz" id="37f-hY-MfZ"/>
                         <outlet property="collegeName" destination="MUZ-LE-lHO" id="OL5-bx-agf"/>
-                        <outlet property="collegePicture" destination="zgE-i6-0Up" id="a8r-X0-9sf"/>
+                        <outlet property="collegePicture" destination="d7e-kO-Tj1" id="eeE-Cl-Y6e"/>
                         <outlet property="collegePopulation" destination="7vi-Bq-m9C" id="XMs-ox-PRx"/>
+                        <outlet property="collegeWebpage" destination="ULf-xp-k5V" id="KQe-0d-J9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Soi-YO-jus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3175" y="320"/>
+            <point key="canvasLocation" x="3185" y="320"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="0cW-kr-0Sx">
+            <objects>
+                <viewController id="pQz-j0-tlc" customClass="CameraViewController" customModule="CollegeProfileBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yv3-C6-lt5"/>
+                        <viewControllerLayoutGuide type="bottom" id="d8E-Ca-3U4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YsJ-pG-tlr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Rp-MJ-hAW">
+                                <rect key="frame" x="0.0" y="64" width="600" height="476"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH2-zN-mUZ">
+                                <rect key="frame" x="0.0" y="540" width="300" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Z5F-Yw-iu3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButton:" destination="pQz-j0-tlc" eventType="touchUpInside" id="Nqe-Vr-nTt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGt-yY-YEN">
+                                <rect key="frame" x="300" y="540" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LgW-eJ-w94"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="photosButton:" destination="pQz-j0-tlc" eventType="touchUpInside" id="NuL-DL-3zI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pGt-yY-YEN" firstAttribute="width" secondItem="YH2-zN-mUZ" secondAttribute="width" id="CME-0y-Zte"/>
+                            <constraint firstItem="pGt-yY-YEN" firstAttribute="leading" secondItem="YH2-zN-mUZ" secondAttribute="trailing" id="I59-wv-lz1"/>
+                            <constraint firstItem="pGt-yY-YEN" firstAttribute="leading" secondItem="YH2-zN-mUZ" secondAttribute="trailing" id="QC7-so-DBe"/>
+                            <constraint firstItem="d8E-Ca-3U4" firstAttribute="top" secondItem="pGt-yY-YEN" secondAttribute="bottom" id="TkN-z1-m1L"/>
+                            <constraint firstItem="pGt-yY-YEN" firstAttribute="top" secondItem="0Rp-MJ-hAW" secondAttribute="bottom" id="TlM-vF-yUK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pGt-yY-YEN" secondAttribute="trailing" constant="-20" id="UZF-qj-bx1"/>
+                            <constraint firstItem="d8E-Ca-3U4" firstAttribute="top" secondItem="YH2-zN-mUZ" secondAttribute="bottom" id="WUV-Fm-Aie"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Rp-MJ-hAW" secondAttribute="trailing" constant="-20" id="Xvf-S5-59B"/>
+                            <constraint firstItem="YH2-zN-mUZ" firstAttribute="leading" secondItem="YsJ-pG-tlr" secondAttribute="leadingMargin" constant="-20" id="f6H-0S-OgH"/>
+                            <constraint firstItem="0Rp-MJ-hAW" firstAttribute="leading" secondItem="YsJ-pG-tlr" secondAttribute="leadingMargin" constant="-20" id="i5f-XU-lru"/>
+                            <constraint firstItem="0Rp-MJ-hAW" firstAttribute="top" secondItem="yv3-C6-lt5" secondAttribute="bottom" id="wIe-Vm-MkR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayImage" destination="0Rp-MJ-hAW" id="q6s-tf-8EG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2r-Bm-ekw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3896" y="320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Em-KD-VNj">

@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import SafariServices
 
-class DetailViewController: UIViewController
+class DetailViewController: UIViewController, UITextFieldDelegate, SFSafariViewControllerDelegate
 {
     
     @IBOutlet weak var collegePicture: UIImageView!
     @IBOutlet weak var collegeName: UITextField!
     @IBOutlet weak var collegeLocation: UITextField!
     @IBOutlet weak var collegePopulation: UITextField!
+    @IBOutlet weak var collegeWebpage: UITextField!
     
     var data: College!
     
@@ -26,19 +28,48 @@ class DetailViewController: UIViewController
         collegeName.text = data.name
         collegeLocation.text = data.loc
         collegePopulation.text = "\(data.num)"
+        collegeWebpage.text = data.page
     }
     
-    @IBAction func saveNewData(sender: UIButton)
+    func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         data.name = collegeName.text!
         data.loc = collegeLocation.text!
         data.num = Int(collegePopulation.text!)!
+        data.page = collegeWebpage.text!
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    @IBAction func loadWebpage(sender: AnyObject)
+    {
+        let url = "https://www.\(collegeWebpage.text!)"
+        let myURL = NSURL(string: url)
+        let SVC = SFSafariViewController(URL: myURL!)
+        SVC.delegate = self
+        presentViewController(SVC, animated: true, completion: nil)
+    }
+    
+    func safariViewControllerDidFinish(controller: SFSafariViewController)
+    {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let nextVC = segue.destinationViewController as! ViewController
-        nextVC.collegeList.append(data)
+        if segue.identifier == "toDetail"
+        {
+            let nextVC = segue.destinationViewController as! ViewController
+            nextVC.collegeList.append(data)
+        }
+        else if segue.identifier == "toCamera"
+        {
+            let nextVC = segue.destinationViewController as! CameraViewController
+            nextVC.imageToDisplay = data.pic
+            nextVC.collegeEdit = data
+        }
     }
     
 }

@@ -25,9 +25,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         collegeEditButton.tag = 0
     
-        collegeList.append(College(Name: "University of Illinois", Loc: "Urbana–Champaign", Num: 44087))
-        collegeList.append(College(Name: "University of Wisconsin", Loc: "Madison", Num: 43193))
-        collegeList.append(College(Name: "Indiana University", Loc: "Bloomington", Num: 48514))
+        collegeList.append(College(Page: "uic.edu", Name: "University of Illinois", Loc: "Urbana–Champaign", Pic: "illinois", Num: 44087))
+        collegeList.append(College(Page: "wisc.edu", Name: "University of Wisconsin", Loc: "Madison", Pic: "wisconsin", Num: 43193))
+        collegeList.append(College(Page: "indiana.edu", Name: "Indiana University", Loc: "Bloomington", Pic: "indiana", Num: 48514))
     }
     
     override func viewDidAppear(animated: Bool)
@@ -117,8 +117,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let myCell = collegesTableView.dequeueReusableCellWithIdentifier("collegeCell", forIndexPath: indexPath)
-        myCell.textLabel!.text = "\(collegeList[indexPath.row].name) (\(collegeList[indexPath.row].num))"
-        myCell.detailTextLabel!.text = collegeList[indexPath.row].loc
+        myCell.textLabel!.text = collegeList[indexPath.row].name
+        myCell.detailTextLabel!.text = (collegeList[indexPath.row].loc)
+        myCell.imageView!.image = collegeList[indexPath.row].pic
         return myCell
     }
     

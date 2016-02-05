@@ -52,4 +52,5 @@ class College
         num = Num
         pic = UIImage(named: "default")!
     }
+    
 }
