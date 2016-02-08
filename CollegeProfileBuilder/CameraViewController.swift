@@ -56,8 +56,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let nextVC = segue.destinationViewController as! DetailViewController
-        nextVC.data = collegeEdit
+        if segue.identifier == "toCamera"
+        {
+            let nextVC = segue.destinationViewController as! DetailViewController
+            nextVC.data = collegeEdit
+        }
     }
     
     

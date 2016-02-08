@@ -31,6 +31,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, SFSafariViewC
         collegeWebpage.text = data.page
     }
     
+    override func viewDidAppear(animated: Bool)
+    {
+        collegePicture.image = data.pic
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         data.name = collegeName.text!

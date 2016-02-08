@@ -114,9 +114,6 @@
                                     <outlet property="delegate" destination="7zm-Hd-glX" id="4hY-VH-FYj"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7e-kO-Tj1">
-                                <rect key="frame" x="180" y="75" width="240" height="240"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULf-xp-k5V">
                                 <rect key="frame" x="180" y="437" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -147,6 +144,13 @@
                                     <segue destination="pQz-j0-tlc" kind="show" identifier="toCamera" id="8yL-BT-g4O"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7e-kO-Tj1">
+                                <rect key="frame" x="180" y="75" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Tmg-Cf-b2Q"/>
+                                    <constraint firstAttribute="height" constant="240" id="UZn-hy-k8J"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -217,6 +221,13 @@
                                     <action selector="photosButton:" destination="pQz-j0-tlc" eventType="touchUpInside" id="NuL-DL-3zI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yls-EB-viZ">
+                                <rect key="frame" x="554" y="34" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="7zm-Hd-glX" kind="show" id="JuI-mX-deP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -260,4 +271,7 @@
             <point key="canvasLocation" x="1641" y="320"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JuI-mX-deP"/>
+    </inferredMetricsTieBreakers>
 </document>
