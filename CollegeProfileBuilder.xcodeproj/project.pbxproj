@@ -17,6 +17,7 @@
 		3F453A821C57D274005BF86D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A811C57D274005BF86D /* DetailViewController.swift */; };
 		3F5FBBCB1C5A7CB6000FBD1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5FBBCA1C5A7CB6000FBD1A /* Images.xcassets */; };
 		3F5FBC411C610C44000FBD1A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FBC401C610C44000FBD1A /* CameraViewController.swift */; };
+		3F5FBD311C7B6AF5000FBD1A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FBD301C7B6AF5000FBD1A /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3F453A811C57D274005BF86D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F5FBBCA1C5A7CB6000FBD1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F5FBC401C610C44000FBD1A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3F5FBD301C7B6AF5000FBD1A /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				3F453A7F1C4FEB6E005BF86D /* College.swift */,
 				3F453A531C4FE885005BF86D /* ViewController.swift */,
 				3F453A811C57D274005BF86D /* DetailViewController.swift */,
+				3F5FBD301C7B6AF5000FBD1A /* LocationViewController.swift */,
 				3F5FBC401C610C44000FBD1A /* CameraViewController.swift */,
 				3F5FBBCA1C5A7CB6000FBD1A /* Images.xcassets */,
 				3F453A551C4FE885005BF86D /* Main.storyboard */,
@@ -271,6 +274,7 @@
 				3F453A541C4FE885005BF86D /* ViewController.swift in Sources */,
 				3F5FBC411C610C44000FBD1A /* CameraViewController.swift in Sources */,
 				3F453A521C4FE885005BF86D /* AppDelegate.swift in Sources */,
+				3F5FBD311C7B6AF5000FBD1A /* LocationViewController.swift in Sources */,
 				3F453A801C4FEB6E005BF86D /* College.swift in Sources */,
 				3F453A821C57D274005BF86D /* DetailViewController.swift in Sources */,
 			);

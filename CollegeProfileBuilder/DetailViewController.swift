@@ -34,6 +34,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, SFSafariViewC
     override func viewDidAppear(animated: Bool)
     {
         collegePicture.image = data.pic
+        collegeLocation.text = data.loc
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
@@ -50,7 +51,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, SFSafariViewC
     
     @IBAction func loadWebpage(sender: AnyObject)
     {
-        let url = "https://www.\(collegeWebpage.text!)"
+        let url = "https://\(collegeWebpage.text!)"
         let myURL = NSURL(string: url)
         let SVC = SFSafariViewController(URL: myURL!)
         SVC.delegate = self
@@ -74,6 +75,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, SFSafariViewC
             let nextVC = segue.destinationViewController as! CameraViewController
             nextVC.imageToDisplay = data.pic
             nextVC.collegeEdit = data
+        }
+        else if segue.identifier == "toMap"
+        {
+            let nextVC = segue.destinationViewController as! LocationViewController
+            nextVC.data = data
         }
     }
     

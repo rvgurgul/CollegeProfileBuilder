@@ -25,9 +25,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         collegeEditButton.tag = 0
     
-        collegeList.append(College(Page: "uic.edu", Name: "University of Illinois", Loc: "Urbana–Champaign", Pic: "illinois", Num: 44087))
-        collegeList.append(College(Page: "wisc.edu", Name: "University of Wisconsin", Loc: "Madison", Pic: "wisconsin", Num: 43193))
-        collegeList.append(College(Page: "indiana.edu", Name: "Indiana University", Loc: "Bloomington", Pic: "indiana", Num: 48514))
+        collegeList.append(College(Page: "www.uic.edu", Name: "University of Illinois", Loc: "Urbana Champaign", Pic: "illinois", Num: 44087))
+        collegeList.append(College(Page: "www.wisc.edu", Name: "University of Wisconsin", Loc: "Madison", Pic: "wisconsin", Num: 43193))
+        collegeList.append(College(Page: "www.indiana.edu", Name: "Indiana University", Loc: "Bloomington", Pic: "indiana", Num: 48514))
+        collegeList.append(College(Page: "www.google.com", Name: "Google", Loc: "", Num: 0))
     }
     
     override func viewDidAppear(animated: Bool)
@@ -83,7 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let nameTF = myAlert.textFields![1]
             let locTF = myAlert.textFields![2]
             let numTF = myAlert.textFields![3]
-                
+            
             self.collegeList.append(College(Page: pageTF.text!, Name: nameTF.text!, Loc: locTF.text!, Num: Int(numTF.text!)!))
             self.collegesTableView.reloadData()
         }
@@ -118,7 +119,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         let myCell = collegesTableView.dequeueReusableCellWithIdentifier("collegeCell", forIndexPath: indexPath)
         myCell.textLabel!.text = collegeList[indexPath.row].name
-        myCell.detailTextLabel!.text = (collegeList[indexPath.row].loc)
+        myCell.detailTextLabel!.text = collegeList[indexPath.row].loc
         myCell.imageView!.image = collegeList[indexPath.row].pic
         return myCell
     }

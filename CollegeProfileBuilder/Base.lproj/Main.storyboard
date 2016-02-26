@@ -151,6 +151,14 @@
                                     <constraint firstAttribute="height" constant="240" id="UZn-hy-k8J"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03i-QO-auW">
+                                <rect key="frame" x="428" y="354" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="➤"/>
+                                <connections>
+                                    <segue destination="MLT-5c-QtQ" kind="show" identifier="toMap" id="WOQ-mO-42e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -161,6 +169,7 @@
                             <constraint firstItem="ULf-xp-k5V" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="M65-ku-i6F"/>
                             <constraint firstItem="MUZ-LE-lHO" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="UGV-0Q-jbp"/>
                             <constraint firstItem="YrO-4t-9fA" firstAttribute="centerX" secondItem="RZz-zA-qrJ" secondAttribute="centerX" id="VMJ-P5-gCw"/>
+                            <constraint firstItem="03i-QO-auW" firstAttribute="leading" secondItem="fR9-lM-CAz" secondAttribute="trailing" constant="10" id="VRj-F7-iAy"/>
                             <constraint firstItem="RDf-a1-xdz" firstAttribute="leading" secondItem="ULf-xp-k5V" secondAttribute="trailing" constant="10" id="bOG-dr-4bl"/>
                         </constraints>
                     </view>
@@ -251,6 +260,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2r-Bm-ekw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3896" y="320"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="ydU-uL-DIH">
+            <objects>
+                <viewController id="MLT-5c-QtQ" customClass="LocationViewController" customModule="CollegeProfileBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oAN-d3-gxy"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgu-Ft-00b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zr6-tW-93B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="Icv-Jx-05L">
+                                <rect key="frame" x="0.0" y="44" width="600" height="641"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" misplaced="YES" placeholder="College Location" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-TA-Ivq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MLT-5c-QtQ" id="I6y-a7-Pm4"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hfb-TA-Ivq" secondAttribute="trailing" constant="-20" id="2n4-C6-E8f"/>
+                            <constraint firstItem="Hfb-TA-Ivq" firstAttribute="top" secondItem="Zr6-tW-93B" secondAttribute="topMargin" constant="64" id="DYJ-e4-JM6"/>
+                            <constraint firstItem="Hfb-TA-Ivq" firstAttribute="leading" secondItem="Zr6-tW-93B" secondAttribute="leadingMargin" constant="-20" id="QoK-T1-jUG"/>
+                            <constraint firstItem="sgu-Ft-00b" firstAttribute="top" secondItem="Icv-Jx-05L" secondAttribute="bottom" id="Uug-ut-1wO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Icv-Jx-05L" secondAttribute="trailing" constant="-20" id="g9d-yo-4JB"/>
+                            <constraint firstItem="Icv-Jx-05L" firstAttribute="leading" secondItem="Zr6-tW-93B" secondAttribute="leadingMargin" constant="-20" id="raN-dT-1kI"/>
+                            <constraint firstItem="Icv-Jx-05L" firstAttribute="top" secondItem="Zr6-tW-93B" secondAttribute="topMargin" id="xIw-0f-dH4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="HrS-7B-nwP"/>
+                    <connections>
+                        <outlet property="locationDisplay" destination="Icv-Jx-05L" id="tak-q6-hiO"/>
+                        <outlet property="locationSearchBar" destination="Hfb-TA-Ivq" id="dqz-jC-mUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-gn-XDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3185" y="1041"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Em-KD-VNj">
